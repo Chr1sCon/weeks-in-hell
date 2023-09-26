@@ -1,0 +1,104 @@
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-table td {
+  border: 1px solid #333;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  border: 0;
+  text-align: center;
+  padding: 8px;
+}
+
+td.emptytd {
+  border: 0;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Alternating background for months */
+.even-month {
+  background-color: #333; /* or any color you prefer */
+}
+
+.odd-month {
+  background-color: #444; /* or any color you prefer */
+}
+
+/* Cell colors */
+td.cell-green {
+  background-color: #28a745;
+}
+
+td.cell-orange {
+  background-color: #ffc107;
+}
+
+td.cell-red {
+  background-color: #dc3545;
+}
+
+/* Touch-friendly */
+.cell {
+  cursor: pointer;
+  padding: 16px;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#calendarArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.person-calendar {
+  flex: 1; /* Allow the item to grow and shrink */
+  flex-basis: calc(33.333% - 20px); /* Initial width, considering margin */
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+@media (max-width: 992px) {
+  .person-calendar {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .person-calendar {
+    flex-basis: 100%;
+  }
+}
+
+.removePersonBtn {
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#newPersonName {
+  flex: 1;
+}
+
+addPersonBtn {
+  margin: 0;
+}

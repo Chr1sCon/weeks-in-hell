@@ -1,0 +1,12 @@
+# Ignore node modules
+node_modules
+
+# Ignore development files
+*.env
+*.git
+*.md
+Dockerfile
+.dockerignore
+
+# Ignore logs
+npm-debug.log

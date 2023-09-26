@@ -1,0 +1,16 @@
+{
+	"weeks": 0,
+	"startDate": "2023-09-25",
+	"endDate": "2023-12-31",
+	"persons": [
+	  {
+		"name": "Chris",
+		"calendar": {}
+	  },
+	  {
+		"name": "Karoline",
+		"calendar": {}
+	  }
+	]
+  }
+  
