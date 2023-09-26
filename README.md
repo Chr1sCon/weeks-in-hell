@@ -4,6 +4,8 @@
 
 The Weeks in Hell tracker is a web application designed to help users track their eating and workout habits. The app provides a calendar interface where users can mark their daily and weekly progress using color-coded boxes. Multiple users can be added to the app, making it suitable for families or groups for a little friendly competition.
 
+<img width="1235" alt="weeks-in-hell-screenshot" src="https://github.com/Chr1sCon/weeks-in-hell/assets/20434300/550bb7fa-0f4a-4484-9081-d7d93c18c2a0">
+
 ## Features
 
 - Individual calendars for each user
