@@ -3,8 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 const port = 3000;
-//const jsonFilePath = './data/appState.json';
-const jsonFilePath = "/usr/src/app/data/appState.json";
+const jsonFilePath = './data/appState.json';
+//const jsonFilePath = "/usr/src/app/data/appState.json";
 
 // Function to initialize the JSON file
 const initializeJsonFile = () => {

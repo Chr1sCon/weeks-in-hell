@@ -63,13 +63,29 @@ To deploy this app as a container, you'll need to have Docker installed on your 
    docker build -t weeks-in-hell .
    ```
 
-2. Run the Docker container:
+2. Run the Docker container with persistent storage:
 
-   ```bash
-   docker run -p 3000:3000 weeks-in-hell
-   ```
+```bash
+docker run -p 3000:3000 -v /path/to/local/folder:/usr/src/app/data weeks-in-hell
+```
 
 Now the app should be accessible at \`http://localhost:3000\`.
+
+## Data Persistence
+
+The app stores its data in a JSON file. If you're running the app as a Docker container, you'll want to map a local folder to the container to ensure that the JSON data persists.
+
+1. Identify the path where the JSON file is stored within the container. As default, this should be /usr/src/app/data/.
+
+2. Choose a local folder where you want to store the JSON file. For example, /Users/yourusername/weeks-in-hell-data.
+
+3. Run the Docker container, mapping the local folder to the folder in the container:
+
+```bash
+docker run -p 3000:3000 -v /Users/yourusername/weeks-in-hell-data:/app/data weeks-in-hell
+```
+
+This will ensure that the JSON file is saved on your local machine, even if the Docker container is stopped or removed.
 
 ## Contributing
 
