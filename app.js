@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-const port = 3000;
+const port = 3002;
 const jsonFilePath = './data/appState.json';
 //const jsonFilePath = "/usr/src/app/data/appState.json";
 
