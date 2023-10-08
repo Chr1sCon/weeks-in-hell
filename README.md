@@ -71,6 +71,39 @@ docker run -p 3000:3000 -v /path/to/local/folder:/usr/src/app/data weeks-in-hell
 
 Now the app should be accessible at \`http://localhost:3000\`.
 
+## Push to Docker Hub Script
+
+### Usage:
+- To auto-increment the version by 0.01:
+  `./pushToDocker.sh`
+
+- To specify a version manually:
+  `./pushToDocker.sh 2.00`
+
+### Docker compose example
+```
+version: "3.7"
+
+services:
+  weeks-in-hell:
+    image: chr1scon/weeks-in-hell:latest
+    container_name: weeks-in-hell
+    restart: unless-stopped  
+    volumes:
+      - /home/chris/docker/weeks-in-hell/data:/usr/src/app/data   
+    ports:
+      - "3002:3002"
+    environment:
+      - TZ="Europe/Oslo"
+    networks:
+      macvlan:
+        ipv4_address: 10.24.10.118
+
+networks:
+  macvlan:
+    external: true
+````
+
 ## Data Persistence
 
 The app stores its data in a JSON file. If you're running the app as a Docker container, you'll want to map a local folder to the container to ensure that the JSON data persists.

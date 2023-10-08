@@ -13,8 +13,11 @@ RUN npm install
 # Copy the rest of the code
 COPY . .
 
+# Set file permissions (this won't affect mounted volumes)
+RUN chmod 644 /usr/src/app/data/appState.json
+
 # Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 3002
 
 # Command to run the app
 CMD ["npm", "start"]

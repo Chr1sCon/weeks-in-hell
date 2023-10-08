@@ -7,12 +7,18 @@
   border: 1px solid #333;
   text-align: center;
   padding: 8px;
+  width: 40px;
+  font-size: 8px;
 }
 
 th {
   border: 0;
   text-align: center;
   padding: 8px;
+}
+
+tr {
+  height: 40px;
 }
 
 td.emptytd {

@@ -10,3 +10,7 @@ Dockerfile
 
 # Ignore logs
 npm-debug.log
+
+# Other
+credentials.config
+docker_credentials.config
