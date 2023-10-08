@@ -133,7 +133,6 @@ const startServer = (appState) => {
 
   // Start the server
   app.listen(port, () => {
-    console.log(`DEBUG: App running in ${process.cwd()}`);
     console.log(`Weeks in Hell app listening at http://localhost:${port}`);
   });
 };
